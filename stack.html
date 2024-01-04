@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[];
+        var c= -1;
+        function Push()
+        {
+            c++;
+            a[c]=document.getElementById("text1").value;
+            display();
+            document.getElementById("text1").value=""
+        }
+        function Pop()
+        {
+            if(c == -1)
+            {
+                console.log("underflow");
+            }else{
+                a[c]=undefined;
+                c--;
+            }
+            display();
+        }
+        function display()
+        {
+            for(i=0;i<=c;i++)
+            {
+                console.log(a);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1" >
+    <input type="button" value="add" onclick="Push()">
+    <input type="button" value="pop" onclick="Pop()">
+</body>
+</html>
