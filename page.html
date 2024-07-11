@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gym management</title>
+    <style>
+        div {
+            height: 600px;
+            width: 100%;
+            padding: 30px;
+        }
+        @media screen and (max-width:500px){
+         #navbar{
+            background-color: rgb(59, 119, 172);
+        }
+            #a1{
+            display: block;
+            margin-right: 50px;
+            background-color: aqua;
+         }
+         #a2{
+             display: block;
+             margin-right: 50px;
+            }
+         #a3{
+            display: block;
+            margin-right: 50px;
+
+         }
+         #a4{
+            display: block;
+            margin-right: 50px;
+
+
+         }
+         #a5{
+            display: block;
+            margin-right: 50px;
+
+         }
+         #home_div{
+            margin-top: 150px;
+         }
+         #text{
+            display: inline-block;
+         }
+         #symbol{
+            margin-left: 50px;
+         }
+         #v1{
+            margin-left: 50px;
+         }
+         #v2{
+            margin-left: 50px;
+         }
+         #v3{
+            margin-left: 50px;
+         }
+         #video_div{
+            margin-top: 150px;
+         }
+         #audio_div{
+            margin-top: 150px;
+         }
+         #about_div{
+            margin-top: 150px;
+         }
+         #contact_div{
+            margin-top: 150px;
+         }
+        }
+    </style>
+</head>
+
+<body link="white" vlink="white">
+    <p  id="navbar" align="right" style="position: fixed;top: 0;width: 100%; background-color: blue;">
+        <a id="a1" href="#home_div">Home</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="a5" href="#video_div">Video</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="a2" href="#audio_div">Audio</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a  id="a3" href="#about_div">About</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="a4" href="#contact_div">Contact</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+    <div id="home_div">
+        <center>
+            <h1>
+                Home Page
+            </h1>
+        </center>
+        <img align="left" id="symbol" src="../Image/OIP.jpg" style="margin-right: 20px;width: 300px;">
+        <p id="text" style="font-size: 20px; padding: 10px;"> ipsum dolor sit amet consectetur adipisicing elit. Dolores quod
+            quidem fuga nostrum explicabo vero
+            asperiores aut quis maiores nesciunt! Sequi maiores, neque blanditiis veritatis doloremque voluptatem
+            sed nam. Explicabo</p>
+    </div>
+    <div id="video_div">
+        <center>
+            <h1>
+                Video
+            </h1>
+        </center>
+        <table align="center">
+            <tr>
+                <td>
+                    <video id="v1" width="300px" controls>
+                        <source src="../video/pexels-tima-miroshnichenko-5319759 (2160p).mp4">
+                    </video>
+                    <video id="v2" width="300px" controls>
+                        <source src="../video/production_id_4367572 (1080p).mp4">
+                    </video>
+                    <video id="v3" width="300px" controls>
+                        <source src="../video/production_id_4367580 (1080p).mp4">
+                    </video>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="audio_div">
+        <center>
+            <h1>
+                Audio
+            </h1>
+        </center>
+        <table align="center">
+            <tr>
+                <td>
+                    <audio id="s1" width="300px" controls>
+                        <source src="../audio/crossover-21738.mp3">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio id="s2" width="300px" controls>
+                        <source src="../audio/hard-rock-logo-108960.mp3">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio id="s3" width="300px" controls>
+                        <source src="../audio/workout-gym-training-boxing-32628.mp3">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="about_div">
+        <center>
+            <h1>
+                About
+            </h1>
+        </center>
+        <p style="font-size: 20px; padding: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto obcaecati sunt eius, nobis, voluptatem
+            cumque qui consequuntur, ea illo iure doloribus. Inventore animi dolor corrupti consequuntur, autem
+            assumenda provident itaque.</p>
+    </div>
+    <div id="contact_div">
+        <center>
+        <h1>
+            Contact
+        </h1>
+        </center>
+        <form>
+            <table align="center">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" placeholder="enter your name"> </td>
+            </tr>
+            <tr>
+                <td>mobile number</td>
+                <td><input type="number" placeholder="enter your number"> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" placeholder="Email"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="send Message"> </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
