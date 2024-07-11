@@ -7,23 +7,29 @@
     <script>
         var a=[];
         var c= -1;
-        function Push()
+        var flag=0;
+        function getdata()
         {
             c++;
             a[c]=document.getElementById("text1").value;
             display();
             document.getElementById("text1").value=""
         }
-        function Pop()
+        function search()
         {
-            if(c == -1)
+            var value1=document.getElementById("text1").value
+            for(let i=0;i< a.length;i++)
             {
-                console.log("underflow");
-            }else{
-                a[c]=undefined;
-                c--;
+                if(value1 == a[i])
+                {
+                    alert("your value found at "+ i);
+                    flag = 1
+                }
             }
-            display();
+            if(flag == 0)
+            {
+                alert("not found");
+            }
         }
         function display()
         {
@@ -35,8 +41,8 @@
     </script>
 </head>
 <body>
-    <input type="text" id="text1" >
-    <input type="button" value="add" onclick="Push()">
-    <input type="button" value="pop" onclick="Pop()">
+    <input type="text" id="text1">
+    <input type="button" value="Add" onclick="getdata()">
+    <input type="button" value="Search" onclick="search()">
 </body>
 </html>

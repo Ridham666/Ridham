@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var lst= new Array(5)
+        var length=0
+        var f = -1;
+        var r = -1;
+        function push()
+        {
+            if(r == -1 && f == -1)
+            {
+                r++;
+                f++;
+                lst[r]=document.getElementById("text1").value;
+                length++;
+                document.getElementById("text1").value=""
+            }else if(length < 5)
+            {
+                r=((r+1)%5);
+                lst[r]=document.getElementById("text1").value
+                length++;
+                // console.log(lst);
+                document.getElementById("text1").value=""
+            }else{
+                alert("full");
+            }
+            // console.log("lst", lst, "r=", r);
+            display();
+        }
+        function pop()
+        {
+            if(f == -1)
+            {
+                alert("empty")
+            }else if(length <= 5)
+            {
+                if(f==r)
+                {
+                    lst[f]=undefined;
+                    f= -1;
+                    r= -1;
+                    length=0;
+                }else{
+                    lst[f]=undefined;
+                    f=((f+1)%5);
+                    length--;
+                }
+                }
+            // console.log("lst", lst, "f=", f);
+            display();
+        } 
+        function display()
+        {
+            if(f==-1)
+            {
+                alert("empty");
+            }else{
+                var tbl="<ul>"
+                for(var i=f;i!=r;i=((i+1)%5))
+                {
+                    console.log(lst);
+                }
+                console.log(lst);
+                // {
+                //     tbl+="<li>"+lst[i]+"</li>"
+                // }
+                // tbl += "</ul>"
+                // document.getElementById("ans").innerHTML=tbl
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="button" value="push" onclick="push()">
+    <input type="button" value="pop" onclick="pop()">
+    <div id="ans"></div>
+</body>
+</html>

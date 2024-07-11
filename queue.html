@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[];
+        var f= -1;
+        var r= -1;
+        display();
+        function Push()
+        {
+            if(f == -1 && r == -1)
+            {
+                f=0;
+                r=0;
+                a[r]=document.getElementById("text1").value;
+            }else{
+                r++;
+                a[r]=document.getElementById("text1").value;
+            }
+            display();
+            document.getElementById("text1").value="" 
+        }
+        function Pop()
+        {
+            if(f == -1)
+            {
+                alert("empty");
+            }else{
+                a[f]=undefined;
+                f++;
+            }
+            // if(f==r)
+            // {
+            //     if(f == -1 && r == -1)
+            //     {
+            //         alert("empty");        
+            //     }else{
+            //         a[f]=undefined;
+            //     }
+            // }else{
+            //     a[f]=undefined;
+            //     f++;
+            // }
+            display();
+        }
+        function display()
+        {
+            if(f == -1)
+            {
+                alert("empty");
+            }else{
+                for(var i=f;i<=r;i++)
+                {
+                    console.log(a);
+                }
+            }
+            }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="button" value="Push" onclick="Push()">
+    <input type="button" value="Pop" onclick="Pop()">
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array=[10,2,5,-1,-6];
+        console.log(array);
+        function add()
+        {
+            var a=document.getElementById("text1").value
+            array.push(a);
+            mergesort(array);
+        }
+        function slice1(array)
+        {
+            var mid=Math.floor((array.length)/2)
+            var temp=[]
+            for(let i=0;i<mid;i++)
+            {
+                temp.push(array[i]);
+            }
+            return temp;
+        }
+        function slice2(array)
+        {
+            var mid=Math.floor((array.length)/2)
+            var temp=[]
+            for(let i=mid;i<array.length;i++)
+            {
+                temp.push(array[i]);
+            }
+            return temp;
+        }
+        function mergesort(array)
+        {
+            if((array.length)< 2)
+            {
+                return array;
+            }else{
+                // var mid=Math.floor((array.length)/2);
+                // var leftarray=array.slice(0,mid);
+                var leftarray=slice1(array);
+                // var rightarray=array.slice(mid);
+                var rightarray=slice2(array);
+                console.log(leftarray);
+                console.log(rightarray);
+            }
+            var x=mergesort(leftarray);
+            var y=mergesort(rightarray);
+            console.log("x="+ x);
+            console.log("y="+ y);
+            var zarray=merge(x,y);
+            console.log(zarray);
+            return zarray;
+        }
+        function merge(leftarray,rightarray)
+        {
+            var temp=[]
+            while(leftarray.length && rightarray.length)
+            {
+                if(leftarray[0]<rightarray[0])
+                {
+                    // temp.push(shift(leftarray));
+                    temp.push(leftarray.shift())
+                }else{
+                    // temp.push(shift(rightarray));
+                    temp.push(rightarray.shift())
+                }
+            }
+            // var mainarray=temp.concat(leftarray,rightarray)
+            var mainarray=concat(temp,leftarray,rightarray);
+            console.log(mainarray);
+            return mainarray;
+        }
+        function concat(x,leftarray,rightarray)
+        {
+            var temp1=[];
+            for(let k=0;k<x.length;k++)
+            {
+                temp1.push(x[k]);
+            }
+            for(let i=0;i<leftarray.length;i++)
+            {
+                temp1.push(leftarray[i]);
+            }
+            for(let j=0;j<rightarray.length;j++)
+            {
+                temp1.push(rightarray[j]);
+            }
+            return temp1;
+        }
+        // function shift(array)
+        // {
+        //     var newarray=array[0];
+        //     array.splice(0,1);
+        //     return newarray;
+        // }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="button" value="add" onclick="add()">
+    <input type="button" value="sort" onclick="mergesort(array)">
+</body>
+</html>

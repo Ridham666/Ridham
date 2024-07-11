@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a=[0,-3,-25,5,51,7,100,1];
+        function push()
+        {
+            var b=document.getElementById("text1").value
+            a.push(b);
+            document.getElementById("text1").value=""
+            console.log(a);
+        }
+        function sort()
+        {
+            do{
+                var x=false;
+                for(let i=0;i<a.length-1;i++)
+                {
+                    if(a[i]>a[i+1])
+                    {
+                        const temp=a[i];
+                        a[i]=a[i+1];
+                        a[i+1]=temp;
+                        x=true;
+                    }
+                }
+            }while(x);
+            console.log(a);
+        } 
+    </script>
+</head>
+<body>
+    <input type="number" id="text1">
+    <input type="button" value="add" onclick="push()">
+    <input type="button" value="sort" onclick="sort()">
+</body>
+</html>

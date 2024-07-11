@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[14,0,46,-13,-17,-6,4]
+        console.log(a);
+        // function add()
+        // {
+        //     var z=document.getElementById("text1").value
+        //     a.push(z);
+        //     document.getElementById("text1").value=""
+        //     console.log(a);
+        // }
+        function insert()
+        {
+            for(let i=1;i<a.length;i++)
+            {
+                var current=a[i];
+                var j=i-1;
+                while(a[j]>current && j>=0)
+                {
+                    a[j+1]=a[j];
+                    j--;
+                }
+                a[j+1]=current;
+            }
+            console.log(a);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <!-- <input type="button" value="add" onclick="add()"> -->
+    <input type="button" value="sort" onclick="insert()">
+</body>
+</html>
