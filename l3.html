@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
+         function main()
         {
-            for(j=1;j<=5;j++)
-            {
-                if(j==1 || j==5)
-                {
-                    document.write("$");
-                }else{
-
-                    document.write("*");
-                }
-            }
-            document.write("<br>")
+            var x=parseInt(document.getElementById("mail").value)
+            var z=parseInt(document.getElementById("number").value)
+            var swap;
+            swap=x;
+            x=z;
+            z=swap;
+            document.getElementById("text1").innerHTML = "mail = " + x + "<br>contact = "+ z
         }
     </script>
 </head>
 <body>
-    
+    <label>mail: </label><input type="number" id="mail"><br><br>
+    <label>contact: </label><input type="number" id="number"><br><br>
+    <button onclick="main()">print</button>
+    <div id="text1"></div>
 </body>
 </html>

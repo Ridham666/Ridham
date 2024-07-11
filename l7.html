@@ -5,58 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
+         function main()
         {
-            for(j=1;j<=5;j++)
-            {
-                if(i==1)
+            var x=parseInt(document.getElementById("mail").value)
+            var z=parseInt(document.getElementById("number").value)
+             if(x%4==0)
                 {
-                    if(j==1)
+                    if(z%4==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\n&\n" + z + "\nboth are leapyear" 
                     }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\nis leapyear<br>" + z + "\nis not leapyear"
                     }
-                }else if(i==2)
+                }else
                 {
-                    if(j==2)
+                    if(z%4==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\nis not leapyear<br>" + z + "\nis leapyear"
                     }else{
-                        document.write("*\n");
-                    }
-                }else if(i==3)
-                {
-                    if(j==3)
-                    {
-                        document.write("$");
-                    }else{
-                        document.write("*\n");
-                    }
-                }else if(i==4)
-                {
-                    if(j==4)
-                    {
-                        document.write("$");
-                    }else{
-                        document.write("*\n");
-                    }
-                }else if(i==5)
-                {
-                    if(j==5)
-                    {
-                        document.write("$");
-                    }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\n&\n" + z + "\nboth are not leapyear"
                     }
                 }
-            }
-            document.write("<br>")
         }
     </script>
-
 </head>
 <body>
-    
+    <label>mail: </label><input type="number" id="mail"><br><br>
+    <label>contact: </label><input type="number" id="number"><br><br>
+    <button onclick="main()">print</button>
+    <div id="text1"></div>
 </body>
 </html>

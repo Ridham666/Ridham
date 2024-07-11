@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
+        function add(a,b)
         {
-            for(let j=1;j<=4;j++)
-            {
-                if(j==1)
-                {
-                    document.write("1\n");
-                }else if(j==2)
-                {
-                    document.write("3\n");
-                }else if(j==3)
-                {
-                    document.write("5\n");
-                }else
-                {
-                    document.write("7\n");
-                }
-            }
-            document.write("<br>")
+            
+            c=a+b;
+            return c
+
         }
+
+        // console.log(a);
+        function sub()
+        {
+            z = add(10,20);
+            console.log(z);
+
+        }
+     
+        sub()
     </script>
 </head>
 <body>

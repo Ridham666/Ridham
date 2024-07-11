@@ -1,56 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
-        {
-            for(let j=1;j<=5;j++)
+        var a = [];
+        var k =0;
+        function main() {
+            if(document.getElementById("btn").value=="update")
             {
-                if(i==1)
-                {
-                    if(j==3)
-                    {
-                        document.write("$\n");
-                    }else{
-                        document.write("*\n");
-                    }
-                }else if(i==2)
-                {
-                    if(j==3)
-                    {
-                        document.write("$\n");
-                    }else{
-                        document.write("*\n");
-                    }
-                }else if(i==3)
-                {
-                    document.write("$\n");
-                }else if(i==4)
-                {
-                    if(j==3)
-                    {
-                        document.write("$\n");
-                    }else{
-                        document.write("*\n");
-                    }
-                }else if(i==5)
-                {
-                    if(j==3)
-                    {
-                        document.write("$\n");
-                    }else{
-                        document.write("*\n");
-                    }
-                }
+
+               a[k] = document.getElementById("text1").value
+               display()
+                document.getElementById("btn").value = "add"
+                document.getElementById("text1").value = ""
+               
             }
-            document.write("<br>")
+            else{
+            var x = document.getElementById("text1").value
+            a.push(x)
+            document.getElementById("text1").value=""
+            display() 
+            // document.getElementById("text1").value = x
+            // console.log(a);
+            // document.write(a)
+
+
+            // console.log(a[i]);
+            // console.log(z);
+        }
+    }
+        // document.write("the sum = ",sum)
+        function delete1(i) {
+            a.splice(i,1)
+            display()
+
+        }
+        function pop1() {
+            var x = document.getElementById("text1").value
+            a.pop(x)
+            console.log(a);
+            // document.write(a)
+
+            display();
+        }
+        function display() {
+            var z = "<table border=2>"
+            for (var i = 0; i < a.length; i++) {
+                z = z + "<tr><td>" + a[i] + "</td><td> <button onclick='delete1(" + i + ")'>delete</button><button onclick='update1("+i+")'>Update</button> </td></tr>"
+            }
+            z = z + "</table>"
+            document.getElementById("ans").innerHTML = z
+        }
+        function update1(i)
+        {
+            k=i
+            console.log(i);
+            document.getElementById("text1").value=a[i]
+            document.getElementById("btn").value="update"
+            
+            // var Nvalue= prompt("Enter thhe new value")
+            // a[i] = Nvalue
+            display()
+            // console.log(Nvalue);
         }
     </script>
 </head>
+
 <body>
-    
+    <input type="text" id="text1">
+    <input type="button" value="add" id="btn" onclick="main()">
+    <!-- <button onclick="main()">get</button> -->
+    <button onclick="pop1()">delete</button>
+    <div id="ans">
+        <!-- <table border="2px" id="bd"></table> -->
+    </div>
+
 </body>
+
 </html>

@@ -5,57 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
+         function main()
         {
-            for(let j=1;j<=5;j++)
-            {
-                if(i==1)
+            var x=parseInt(document.getElementById("mail").value)
+            var z=parseInt(document.getElementById("number").value)
+                if(x%11==0 && x%5==0)
                 {
-                    if(j==5)
+                    if(z%5==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 5 & 11<br>" + z + "\nis divisible by 5"
+                    }else if(z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 5 & 11<br>" + z + "\nboth divisible by 11"
+                    }else if(z%5==0 && z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\n&\n<br>" + z + "\n both is divisible by 5 & 11"
                     }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 5 & 11<br>" + z + "\nis not divisible by 5 or 11"
                     }
-                }else if(i==2)
+                }else if(x%5==0)
                 {
-                    if(j==4)
+                    if(z%5==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\n&\n" + z + "\nboth divisible by 5" 
+                    }else if(z%11==0){
+            document.getElementById("text1").innerHTML= x + "\nis divisible by 5<br>" + z + "\nis divisible by 11"
+                    }else if(z%5==0 && z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 5<br>" + z + "\nis divisible by 5 & 11"
                     }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 5<br>" + z + "\nis not divisible by 5 or 11"
                     }
-                }else if(i==3)
+                }else if(x%11==0)
                 {
-                    if(j==3)
+                    if(z%5==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 11<br>" + z + "\nis divisible by 5"
+                    }else if(z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\n&\n" + z + "\nboth divisible by 11"
+                    }else if(z%5==0 && z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 11<br>" + z + "\nis divisible by 5 & 11"
                     }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\nis divisible by 11<br>" + z + "\nis not divisible by 5 or 11"
                     }
-                }else if(i==4)
-                {
-                    if(j==2)
+                }else {
+                    if(z%5==0)
                     {
-                        document.write("$");
+                        document.getElementById("text1").innerHTML= x + "\nis not divisible by 5 or 11<br>" + z + "\nis divisible by 5"
+                    }else if(z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\nis not divisible by 5 or 11<br>"+ z + "\nboth divisible by 11"
+                    }else if(z%5==0 && z%11==0){
+                        document.getElementById("text1").innerHTML= x + "\nis not divisible by 5 or 11<br>" + z + "\nis divisible by 5 & 11"
                     }else{
-                        document.write("*\n");
-                    }
-                }else if(i==5)
-                {
-                    if(j==1)
-                    {
-                        document.write("$");
-                    }else{
-                        document.write("*\n");
+                        document.getElementById("text1").innerHTML= x + "\n&\n" + z + "\nboth are not divisible by 5 & 11"
                     }
                 }
-            }
-            document.write("<br>")
         }
     </script>
 </head>
 <body>
-    
+    <label>mail: </label><input type="number" id="mail"><br><br>
+    <label>contact: </label><input type="number" id="number"><br><br>
+    <button onclick="main()">print</button>
+    <div id="text1"></div>
 </body>
 </html>

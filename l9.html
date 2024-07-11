@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let k=5;
-        for(let i=1;i<=5;i++)
+        var a=[];
+        function main()
         {
-            for(j=1;j<=5;j++)
-            {
-                if(i==j || j==k)
+            var x=document.getElementById("text1").value
+            a.push(x)
+            console.log(a);
+            // document.write(a)
+
+            var z = "<ul>"
+
+                for(let i=0;i<a.length;i++ )
                 {
-                    document.write("$\n");
-                }else{
-                    document.write("*\n");
+                 
+                 z=z+"<li>"+a[i]+"</li>"
+                 
+                    // console.log(a[i]);
                 }
-            }
-            k--;
-            document.write("<br>")
+                z =z +"</ul>"
+                // console.log(z);
+            document.getElementById("ans").innerHTML = z
+
         }
     </script>
 </head>
 <body>
+    <input type="text" id="text1">
+    <button onclick="main()">get</button>
+    <div id="ans"></div>
     
 </body>
 </html>

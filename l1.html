@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(let i=1;i<=5;i++)
-        {
-            for(j=1;j<=5;j++)
-            {
-                document.write("*");
-            }
-            document.write("<br>")
-        }
+
+        // var lst = [1,2,3,4,5,5,4,3,2,1,"hi",2.9]
+        // var lst1 = [1,2]
+        // // console.log(typeof(lst));
+        // // document.write(lst)
+        // // document.write("<br><br><br>")
+        // // document.write(lst[-1])
+
+        // // lst.push(1000)
+        // // lst.pop()
+        // // lst.splice(100)
+        // // var z = lst.join(lst1)
+        // // var z = lst.concat(lst1)
+        // var z = lst.slice(1,4)
+        // console.log(z);
+    //    function star()
+    //     {
+    //         for (let i = 0; i <= 49; i++) {
+    //             document.write("*")
+    //         }
+    //     }
+    //     document.write("hello")
+    //     star()
+    //     document.write("bye")
+    //     star()
+    function display()
+    {
+    var z = document.getElementById("text1").value
+    // console.log(z);
+    document.write(z)
+    }
     </script>
 </head>
+
 <body>
-    
+    <input type="text" id="text1">
+    <button onclick="display()"> print </button>
 </body>
+
 </html>
