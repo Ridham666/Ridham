@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/project.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            if(!sessionStorage.getItem("user-id")){
+              window.location.href="login.html";
+            }
+          </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+        <div class=" container-fluid" style="background-color: rgb(163, 217, 238);">
+        <a class="navbar-brand" href="#"><img src="assets/img/gi_logo.png" alt="" height="50px" width="50px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="navbar.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        service
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Addenquires.html">Add enquires</a></li>
+                        <li><a class="dropdown-item" href="batch.html">Add Batch</a></li>
+                        <li><a class="dropdown-item" href="Addcoursename.html">All cours</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        display data
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">All sutdent</a></li>
+                        <li><a class="dropdown-item" href="#">All batch</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a style="margin-right: 30px;" class="nav-link dropdown-toggle" href="" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle" style="color: blue;font-size: 30px;"></i>
+                    </a>
+                    <ul class="dropdown-menu profile">
+                        <li>Email:-k@gmail.com</li>
+                        <li>Password:-123</li>
+                        <li><button onclick="Logout()" type="submit">Logout</button></li>
+                    </ul>
+                </li>
+            </ul>
+            </form>
+        </div>
+        </div>
+    </nav>
+    <div class="img">
+        <div id="formdiv1">
+            <form class="row g-3">
+                <div class="col-md-6 col-12" font-size="center">
+                    <label for="inputEmail4" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="E.g: John Smith">
+                    <span id="addenquires" style="color: red;"></span>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="inputPassword4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="johnsmith@hotmail.com">
+                    <span id="addenquires1" style="color: red;"></span>
+                </div>
+                <div class="col-md-6 col-12" >
+                    <label for="inputAddress" class="form-label">Contact1</label>
+                    <input type="text" class="form-control" id="contact1" placeholder="Contact Number">
+                    <span id="addenquires2" style="color: red;"> </span>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="inputAddress" class="form-label">Contact2</label>
+                    <input type="text" class="form-control" id="contact2" placeholder="(Optional)">
+                    <span id="addenquires3" style="color: red;"></span>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="inputAddress" class="form-label">Area</label>
+                    <input type="text" class="form-control" id="area" placeholder="Enter Area">
+                    <span id="addenquires4" style="color: red;"></span>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="inputAddress" class="form-label">Date of join</label>
+                    <input type="date" class="form-control" id="dateofjoin" placeholder="optional">
+                    <span id="addenquires5" style="color: red;"></span>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">College/School</label>
+                    <input type="text" class="form-control" id="collegeschool" placeholder="College/School Name">
+                <span id="addenquires6" style="color: red;"></span>
+                </div>
+                <h6>Mode Of Enquiry</h6>
+                <div class="col-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Telephone
+                        </label>
+                       
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Visit
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputState" class="form-label">Courses</label>
+                    <select id="courses" class="form-select">
+                        <option selected><object data="" type="checkbox"></object></option>
+                        <option>python</option>
+                        <option>javA</option>
+                        <option>HTML</option>
+                        <span id="addenquires7" style="color: red;"></span>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">Fees</label>
+                    <input type="text" class="form-control" id="fees" placeholder="0">
+                    <span id="addenquires8 " style="color: red;"></span>
+
+                </div>
+                <div class="col-md-12">
+                    <label for="inputAddress" class="form-label">Reference</label>
+                    <input type="text" class="form-control" id="reference" placeholder="(Optional)">
+                    <span id="addenquires9" style="color: red;"></span>
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" onclick="Add1()">Add</button>
+                    <button type="button" class="btn btn-primary">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+      <script>
+    function Add1() {
+        const fullname = document.getElementById("fullname").value;
+        const  email= document.getElementById("email").value;
+        const contact1 = document.getElementById("contact1").value;
+        const contact2 = document.getElementById("contact2").value;
+        const area = document.getElementById("area").value;
+        const dateofjoin = document.getElementById("dateofjoin").value;
+        const collegeschool = document.getElementById("collegeschool").value;
+        // const courses = document.getElementById("courses").value;
+        // const fees = document.getElementById("fees").value;
+        const reference = document.getElementById("reference").value;
+       
+       
+        const addenquires = document.getElementById("addenquires");
+        const addenquires1 = document.getElementById("addenquires1");
+        const addenquires2 = document.getElementById("addenquires2");
+        const addenquires3 = document.getElementById("addenquires3");
+        const addenquires4 = document.getElementById("addenquires4");
+        const addenquires5 = document.getElementById("addenquires5");
+        const  addenquires6= document.getElementById("addenquires6");
+        // const  addenquires7= document.getElementById("addenquires7");
+        // const addenquires8 = document.getElementById("addenquires8");
+        const addenquires9 = document.getElementById("addenquires9");
+  
+        if (fullname == "") {
+            addenquires.innerHTML = "fullnameis required"
+        }
+        else{
+            addenquires.innerHTML = ""
+
+        }
+        if (email == "") {
+            addenquires1.innerHTML = "email  is required"
+        }
+        else{
+            addenquires1.innerHTML = ""
+
+        }
+        if (contact1 == "") {
+            addenquires2.innerHTML = "contact1 is required"
+        }
+        else{
+            addenquires2.innerHTML = ""
+
+        }
+        if (contact2 == "") {
+            addenquires3.innerHTML = "contact2 is required"  
+        }
+        else{
+            addenquires3.innerHTML = ""
+
+        }
+        if (area == "") {
+            addenquires4.innerHTML = "area is required"
+          }
+          else{
+            addenquires4.innerHTML = ""
+        }
+        if (dateofjoin == "") {
+            addenquires5.innerHTML = "dateofjoin is required"
+        }
+        else{
+            addenquires5.innerHTML = ""
+        }
+        if ( collegeschool== "") {
+            addenquires6.innerHTML = "college/school is required"
+        }
+        else{
+            addenquires6.innerHTML = ""
+        }
+        // if ( courses== "") {
+        //     addenquires7.innerHTML = "courses is required" 
+        // }
+        // else{
+        //     addenquires7.innerHTML = ""
+        // }
+        // if (fees == "") {
+        //     addenquires8.innerHTML = "fees required"
+        // }
+        // else{
+        //     addenquires8.innerHTML = ""
+        // }
+        if ( reference== "") { 
+            addenquires9.innerHTML = " reference required"
+        }
+        else{
+            addenquires9.innerHTML = ""
+        }
+
+       
+//   else( fullname!==""&& email!==""&& contact1!==""&&contact2!==""&&dateofjoin!==""&&collegeschool!==""&&courses!==""&&fees!==""&&reference!=="")
+//   {
+//     var  k=
+//     {
+// "fullname":fullname,
+// "email":email,
+// "contact1":contact1,
+// "contact2":contact2,
+// "dateofjoin":dateofjoin,
+// "collegeschool":collegeschool,
+// "courses":courses,
+// "fees":fees,
+// "reference":reference,
+// } } 
+      }
+    </script>
+
+
+    <script>
+        function Logout(){
+            sessionStorage.removeItem("user-id")
+            window.location.href="login.html"
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+
+

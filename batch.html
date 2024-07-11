@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="assets/css/project.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<script>
+  
+
+  if(!sessionStorage.getItem("user-id")){
+    window.location.href="login.html";
+  }
+</script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+    <div class="container-fluid" style="background-color: rgb(163, 217, 238);">
+      <a class="navbar-brand" href="#"><img src="assets/img/gi_logo.png" alt="" height="50px" width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="navbar.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              service
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Addenquires.html">Add enquires</a></li>
+              <li><a class="dropdown-item" href="batch.html">Add Batch</a></li>
+              <li><a class="dropdown-item" href="Addcoursename.html">All cours</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              display data
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">All sutdent</a></li>
+              <li><a class="dropdown-item" href="#">All batch</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a style="margin-right: 30px;" class="nav-link dropdown-toggle" href="" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person-circle" style="color: blue;font-size: 30px;"></i>
+            </a>
+            <ul class="dropdown-menu profile">
+              <li>Email:-k@gmail.com</li>
+              <li>Password:-123</li>
+              <li><button onclick="Logout()" type="submit">Logout</button></li>
+            </ul>
+          </li>
+        </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="img">
+    <div id="formdiv4">
+      <form class="row g-4 ">
+        <div class="col-md-6"font-size="center">
+          <label for="inputEmail4" class="form-label">Batch name</label>
+          <input type="text" class="form-control" id="batchname" placeholder="Eg.html">
+          <span id="batch" style="color: red;" ></span>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Time</label>
+          <input type="email" class="form-control" id="time">
+          <span id="batch1" style="color: red;" ></span>
+        </div>
+        <div class="col-md-6 col-md-6">
+          <label for="inputAddress" class="form-label">Trainer name</label>
+          <input type="text" class="form-control" id="trainername" placeholder="E.g:john Smith">
+          <span id="batch2" style="color: red;" ></span>
+        </div>
+        <div class="col-md-6 col-md-6">
+          <label for="inputAddress" class="form-label">Daily Hours</label>
+          <input type="text" class="form-control" id="dailyhours" placeholder="(optional)">
+          <span id="batch3" style="color: red;"></span>
+        </div>
+        <div class="col-md-6 col-md-6">
+            <label for="inputAddress" class="form-label">Set Date</label>
+            <input type="date" class="form-control" id="setdate" placeholder="optional">
+            <span id="batch4" style="color: red;"></span>
+          </div>
+        <div class="col-md-6 col-md-6">
+          <label for="inputAddress" class="form-label">End Date </label>
+          <input type="date" class="form-control" id="enddate" placeholder="optional">
+          <span  id="batch5" style="color: red;"></span>
+        </div>
+        <div class="col-md-6 col-md-6">
+            <label for="inputAddress" class="form-label">Day's</label>
+            <input type="text" class="form-control" id="days" placeholder="E.g:Monday,Tuesday.etc">
+            <span id="batch6" style="color: red;"></span>
+          </div>
+    <h1>courses:-</h1>
+    <div class="col-md-6">
+        <label for="inputState" class="form-label">Courses</label>
+        <select id="courses" class="form-select">
+          <span id="batch7" style="color: red;"></span>
+          <option selected><object data="" type="checkbox" ></object></option> 
+          <option>python</option>
+          <option>React JS</option>
+          <option>Larvel</option>
+          <option>DSA</option> 
+          <option>Angular js</option> 
+          <option>c</option> 
+          <option>Laravel</option> 
+          <option>Node JS</option>  
+          <option>java</option> 
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" onclick="Add2()">Add</button>
+        <button type="button" class="btn btn-primary">Reset</button>
+    </div>
+      </form>
+    </div>
+  </div> 
+  <script>
+    function Logout(){
+        sessionStorage.removeItem("user-id")
+        window.location.href="login.html"
+    }
+</script>  
+<script>
+  function Add2(){
+    const batchname = document.getElementById("batchname").value;
+    const time = document.getElementById("time").value;
+    const trainername = document.getElementById("trainername").value;
+    const dailyhours = document.getElementById("dailyhours").value;
+    const setdate = document.getElementById("setdate").value;
+    const enddate = document.getElementById("enddate").value;
+    const days = document.getElementById("days").value;
+    const courses = document.getElementById("courses").value;
+
+    
+    const batch = document.getElementById("batch");
+    const batch1 = document.getElementById("batch1");
+    const batch2 = document.getElementById("batch2");
+    const batch3 = document.getElementById("batch3");
+    const batch4 = document.getElementById("batch4");
+    const batch5 = document.getElementById("batch5");
+    const batch6 = document.getElementById("batch6");
+    const batch7 = document.getElementById("batch7");
+    if (batchname == "") { batch.innerHTML = "Batch is required"}
+         else{ batch.innerHTML = ""}
+    if(time==""){batch1.innerHTML = "Time is required"}
+         else{batch1.innerHTML = ""}
+     if(trainername==""){batch2.innerHTML="Trainername is required"}
+         else{batch2.innerHTML = ""}
+     if(dailyhours==""){batch3.innerHTML="Dailyhours is required"}
+         else{batch3.innerHTML = ""}
+     if(setdate==""){batch4.innerHTML="Setdate is required"}
+         else{batch4.innerHTML = ""}
+     if(enddate==""){batch5.innerHTML="Enddate is required"}
+         else{batch5.innerHTML = ""}
+     if(days==""){batch6.innerHTML="Days is required"}
+         else{batch6.innerHTML = ""}
+     if(courses==""){batch7.innerHTML="Courses is required"}
+         else{batch7.innerHTML = ""}
+
+
+  }
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
