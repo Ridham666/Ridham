@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[];
+        function main()
+        {
+            var z={"username":document.getElementById("text1").value,"password":document.getElementById("text2").value}
+        
+            a.push(z)
+            document.getElementById("text1").value=""
+            document.getElementById("text2").value=""
+            console.log(z)
+        }
+        function login()
+        {
+            var text1 = document.getElementById("text1").value
+            var text2 = document.getElementById("text2").value
+            f=false;
+            for(let i=0;i<a.length;i++)
+            {
+                if(text1==a[i].username && text2==a[i].password)
+                {
+                    f=true;
+                }else{
+                    f=false;
+                }
+
+            }
+            if(f==true)
+            {
+                alert("login");
+            }else{
+                alert("invalid")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="number" id="text2">
+    <input type="button" value="register" onclick="main()">
+    <input type="button" value="login" onclick="login()">
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[];
+        var k=0;
+        function main()
+        {
+            if(document.getElementById("btn").value=="update")
+            {
+                a[k].name=document.getElementById("text1").value
+                a[k].age=document.getElementById("num1").value
+                a[k].salary=document.getElementById("num2").value
+                display()
+                document.getElementById("btn").value="add"
+                document.getElementById("text1").value=""
+                document.getElementById("num1").value=""
+                document.getElementById("num2").value=""
+            }else{
+                var x=document.getElementById("text1").value
+                var y=document.getElementById("num1").value
+                var w=document.getElementById("num2").value
+                var obj={"name":x,"age":y,"salary":w}
+                a.push(obj)
+                display()
+                //    a.push(x)
+                //    a.push(y)
+                //    a.push(w)
+                //    display()
+                document.getElementById("text1").value =""
+                document.getElementById("num1").value =""
+                document.getElementById("num2").value =""
+            }
+        }
+        function delete1(i)
+        {
+            a.splice(i,1)
+            display()
+        }
+        function display()
+        {
+            var z="<table border=2>";
+                for (var i = 0; i < a.length; i++) 
+                {
+                    z = z + "<tr><td>" + a[i].name + "</td><td>"+a[i].age + "</td><td>"+a[i].salary+"</td><td> <button onclick='delete1(" + i + ")'>delete</button><button onclick='update1("+i+")'>Update</button> </td></tr>"
+                }
+                z = z + "</table>"
+                document.getElementById("ans").innerHTML = z
+            }
+            function update1(i)
+            {
+                k=i
+                console.log(i)
+                document.getElementById("text1").value =a[i].name
+                document.getElementById("btn").value = "update"
+                document.getElementById("num1").value=a[i].age
+                // document.getElementById("btn").value = "update"
+                document.getElementById("num2").value=a[i].salary
+                display()
+                // document.getElementById("btn").value = "update"
+            }
+            </script>
+</head>
+<body>
+    <input type="text" id="text1"><br><br>
+    <input type="number" id="num1"><br><br>
+    <input type="number" id="num2"><br><br>
+    <input type="button" value="add" id="btn" onclick="main()"><br><br>
+    <div id="ans"></div>
+</body>
+</html> 
