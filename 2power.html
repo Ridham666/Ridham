@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var z=1;
+        function power()
+        {
+            var target=document.getElementById("text1").value
+            do
+            {
+                var x=false;
+                for(let i=0;i<=target;i++)
+                {
+                    if(z<=target)
+                    {
+                        if(z==target)
+                        {
+                            console.log("found at power "+ i );
+                            x=false;
+                            break;
+                        }else{
+                            z = z * 2;
+                            x=true;
+                        }
+                    }else{
+                        console.log("not found");
+                        x=false;
+                        break;
+                    }
+                }
+            }while(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="button" value="get" onclick="power()">
+</body>
+</html>

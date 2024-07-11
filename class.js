@@ -1,36 +1,30 @@
-class demo{
-    constructor (a,b,c,d)
+class time
+{
+    constructor(hour,min,sec)
     {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+        this.a =hour;
+        this.b =min;
+        this.c =sec;
+    }
+    add(z)
+    {
+        this.a=this.a +z.a
+        this.b=this.b +z.b
+        this.c=this.c +z.c
     }
     disp()
     {
-        document.write(this.a)
-        document.write(this.b)
-        document.write(this.c)
-        document.write(this.d)
+        console.log(this.a);
+        console.log(this.b);
+        console.log(this.c);
     }
 }
-
-let z= new demo(1,2,3,4);
-let x= new demo(5,6,7,8);
-let y= new demo(9,10,11,12);
-let w= new demo(13,14,15,16);
-z.disp()
-x.disp()
-y.disp()
-w.disp()
-// console.log(z.a);
-// console.log(z.b);
-// console.log(z.c);
-// console.log(z.d);
-
-// if(z.a>z.b)
-// {
-//     console.log(z.a, "is maximum");
-// }else{
-//     console.log(z.b,"is maximum");
-// }
+let t1=new time(5,40,50)
+console.log("t1 is:");
+t1.disp()
+let t2=new time(15,41,50)
+console.log("t2 is:");
+t2.disp()
+t1.add(t2)
+console.log("new t1 is:");
+t1.disp()
