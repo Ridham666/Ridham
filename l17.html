@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(let i=1;i<=5;i++)
+        {
+            for(let j=1;j<=5;j++)
+            {
+                if(i==1 || i==3 || i==5)
+                {
+                    if(j%2==0)
+                    {
+                        document.write("0\n");
+                    }else{
+                        document.write("1\n");
+                    }
+                }else 
+                {
+                    if(j%2==0)
+                    {
+                        document.write("1\n");
+                    }else{
+                        document.write("0\n");
+                    }
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
