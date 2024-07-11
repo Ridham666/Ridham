@@ -27,7 +27,7 @@
       border: none;
       outline: none;
       height: 50px;
-      width: 100px;
+      width: 100%;
       background-color: black;
       color: white;
       border-radius: 4px;
@@ -40,27 +40,14 @@
     }
   </style>
   <script>
-    var a=[];
-    function main()
-    {
-        // var c=document.getElementById("text1").value
-        // var x=document.getElementById("text2").value
-        var z={"username":document.getElementById("text1").value,"password":document.getElementById("text2").value}
-        a.push(z)
-        // document.getElementById("text1").value = ""
-        // document.getElementById("text2").value = ""
-        document.getElementById("text1").value = ""
-        document.getElementById("text2").value = ""
-        console.log(z);
-    }
     function login()
     {
-        var text1 = document.getElementById("text1").value
-        var text2 = document.getElementById("text2").value
+        var y=document.getElementById("email").value
+        var z=document.getElementById("p1").value
         f=false;
-        for(let i=0;i<a.length;i++)
+        for(let i=0;i<=a.length;i++)
         {
-            if(text1==a[i].username && text2==a[i].password)
+            if(y==a[i].email && z==a[i].password)
             {
                 f=true;
             }else{
@@ -69,7 +56,7 @@
         } 
         if(f==true)
         {
-            window.open("index1.html")
+            alert("Login")
         }else{
             alert("Invalid")
         }
@@ -89,20 +76,19 @@
           <form>
             <div class="form-row">
               <div class="col-lg-7">
-                <input id="text1" type="email" placeholder="Email-address" class="form-control my-3 p-2">
+                <input type="email" placeholder="Email-address" class="form-control my-3 p-2">
               </div>
             <div class="form-row">
               <div class="col-lg-7">
-                <input id="text2" type="password" placeholder="**" class="form-control">
+                <input type="password" placeholder="**" class="form-control">
               </div>
             <div class="form-row">
               <div class="col-lg-7">
-                <input type="button" class="btn1 mt-3 mb-5 px-3" id="b" value="register" onclick="main()">
-                <input type="button" class="btn1 mt-3 mb-5 px-2" id="l" value="login" onclick="login()">
+                <button type="button" class="btn1 mt-3 mb-5 px-5" onclick="login()">login</button>
               </div>
             </div>
             <a href="#">Forgot password</a>
-            <p>Don't have an account?<a href="#">Register here</a></p>
+            <p>Don't have an account?<a href="register1.html">Register here</a></p>
           </form>
         </div>
       </div>

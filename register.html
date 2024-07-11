@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[];
+        function main()
+        {
+            var c=document.getElementById("text1").value
+            var x=document.getElementById("text2").value
+            var y=document.getElementById("email").value
+            var z=document.getElementById("p1").value
+            var b={"fname":c,"lname":x,"email":y,"password":z}
+            a.push(b)
+            document.getElementById("text1").value = ""
+            document.getElementById("text2").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("p1").value = ""
+        }
+    </script>
+</head>
+<body>
+    <label>First name: </label><input type="text" id="text1"><br><br>
+    <label>Last name&nbsp;: </label><input type="text" id="text2"><br><br>
+    <label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label><input type="email" id="email"><br><br>
+    <label>password&nbsp;&nbsp;&nbsp;: </label><input type="password" id="p1"><br><br>
+    <input href="login.html" type="button" value="register" onclick="main()">
+</body>
+</html>

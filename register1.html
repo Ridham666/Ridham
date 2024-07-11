@@ -27,7 +27,7 @@
       border: none;
       outline: none;
       height: 50px;
-      width: 100px;
+      width: 100%;
       background-color: black;
       color: white;
       border-radius: 4px;
@@ -43,38 +43,20 @@
     var a=[];
     function main()
     {
-        // var c=document.getElementById("text1").value
-        // var x=document.getElementById("text2").value
-        var z={"username":document.getElementById("text1").value,"password":document.getElementById("text2").value}
-        a.push(z)
-        // document.getElementById("text1").value = ""
-        // document.getElementById("text2").value = ""
+        var c=document.getElementById("text1").value
+        var x=document.getElementById("text2").value
+        var y=document.getElementById("email").value
+        var z=document.getElementById("p1").value
+        var b={"fname":c,"lname":x,"email":y,"password":z}
+        a.push(b)
+        console.log(a);
         document.getElementById("text1").value = ""
         document.getElementById("text2").value = ""
-        console.log(z);
+        document.getElementById("email").value = ""
+        document.getElementById("p1").value = ""
+        return b;
     }
-    function login()
-    {
-        var text1 = document.getElementById("text1").value
-        var text2 = document.getElementById("text2").value
-        f=false;
-        for(let i=0;i<a.length;i++)
-        {
-            if(text1==a[i].username && text2==a[i].password)
-            {
-                f=true;
-            }else{
-                f=false;
-            }
-        } 
-        if(f==true)
-        {
-            window.open("index1.html")
-        }else{
-            alert("Invalid")
-        }
-    }
-  </script>
+</script>
 </head>
 <body>
   <section class="Form my-4 mx-5">
@@ -85,24 +67,31 @@
         </div>
         <div class="col-lg-7 px-5 pt-5">
           <h1 class="front-weight-bold py-3">GYM</h1>
-          <h4>Sign into your account</h4>
+          <h4>SignUp</h4>
           <form>
             <div class="form-row">
+                <div class="col-lg-7">
+                  <input id="text1" type="text" placeholder="First name" class="form-control my-3 p-2">
+                </div>  
+            <div class="form-row">
+                <div class="col-lg-7">
+                  <input id="text2" type="text" placeholder="Last name" class="form-control my-3 p-2">
+                </div>      
+            <div class="form-row">
               <div class="col-lg-7">
-                <input id="text1" type="email" placeholder="Email-address" class="form-control my-3 p-2">
+                <input id="email" type="email" placeholder="Email-address" class="form-control my-3 p-2">
               </div>
             <div class="form-row">
               <div class="col-lg-7">
-                <input id="text2" type="password" placeholder="**" class="form-control">
+                <input id="p1" type="password" placeholder="password" class="form-control">
               </div>
             <div class="form-row">
               <div class="col-lg-7">
-                <input type="button" class="btn1 mt-3 mb-5 px-3" id="b" value="register" onclick="main()">
-                <input type="button" class="btn1 mt-3 mb-5 px-2" id="l" value="login" onclick="login()">
+                <input type="button" class="btn1 mt-3 mb-5 px-5" id="b" value="register" onclick="main()">
               </div>
             </div>
-            <a href="#">Forgot password</a>
-            <p>Don't have an account?<a href="#">Register here</a></p>
+            <!-- <a href="#">Forgot password</a> -->
+            <p>Have an account?<a href="login.html">Login here</a></p>
           </form>
         </div>
       </div>
